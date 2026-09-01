@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Coming of Democracy · Build the Skeleton</title>
+<title>Build the Skeleton | The Coming of Democracy in South Africa | Kula Revise</title>
 <style>
 
   /* ================= PALETTE AND TYPE ================= */
@@ -446,6 +446,11 @@ body.dark .explanation.ok, body.dark .explanation.ok .expl-text,
 body.dark .explanation.no, body.dark .explanation.no .expl-text{ color:var(--mark-ink) !important; }
 .explanation.ok .expl-label, body.dark .explanation.ok .expl-label{ color:var(--ok) !important; }
 .explanation.no .expl-label, body.dark .explanation.no .expl-label{ color:var(--no) !important; }
+
+/* Two dark-mode pairs found by walking both modes: the skip line at 2.83 and
+   the exit tag at 4.00, both too dim against their grounds. */
+body.dark .sk-t, body.dark .btn-skip .sk-t{ color:#8AA5AC !important; }
+body.dark .evtag.exit{ color:#FFA6C4 !important; }
 </style>
 </head>
 <body>
@@ -464,8 +469,7 @@ var frame={}, idx=0;
 var COVER={
   eyebrow:"Kula Revise \u00b7 Grade 12 History \u00b7 The Coming of Democracy",
   title:"Build the Skeleton",
-  lines:["Seventy marks. About eighty minutes. Eight hundred to nine hundred words.","You will not write the essay here.","You build its skeleton: the line, the points, the evidence, the verdict.","Then you take the frame away and write it in your own words."]
-};
+  lines:["Seventy marks. About eighty minutes. Eight hundred to nine hundred words.","You will not write the essay here.","You build its skeleton: the line, the points, the evidence, the verdict.","Then you take the frame away and write it in your own words."], time: "Lesson 5 of 5." };
 
 var STEPS=[
   {type:'cover'},
@@ -660,7 +664,10 @@ function renderFrame(){
 }
 
 render();
-var K="kula-theme-2";var SUN="<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='4.2'/><path d='M12 1.6v2M12 20.4v2M3.6 12h-2M22.4 12h-2M5.6 5.6 4.2 4.2M19.8 19.8l-1.4-1.4M18.4 5.6l1.4-1.4M4.2 19.8l1.4-1.4'/></svg>";var MOON="<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z'/></svg>";function paint(){var d=document.body.classList.contains("dark");var ic=document.getElementById("kmt-icon"),la=document.getElementById("kmt-label");if(ic)ic.innerHTML=d?SUN:MOON;if(la)la.textContent=d?"Light mode":"Dark mode";}window.kulaToggle=function(){document.body.classList.toggle("dark");try{localStorage.setItem(K,document.body.classList.contains("dark")?"dark":"light")}catch(e){}paint();};try{var st=localStorage.getItem(K);if(st==="dark")document.body.classList.add("dark");else if(st!=="light"&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)document.body.classList.add("dark");}catch(e){}paint();
+/* This block read its own key while the other boot block and the
+     contract use kula-mode, so a stored light choice was invisible to
+     the toggle and the device preference won instead. */
+  var K="kula-mode";var SUN="<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='4.2'/><path d='M12 1.6v2M12 20.4v2M3.6 12h-2M22.4 12h-2M5.6 5.6 4.2 4.2M19.8 19.8l-1.4-1.4M18.4 5.6l1.4-1.4M4.2 19.8l1.4-1.4'/></svg>";var MOON="<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z'/></svg>";function paint(){var d=document.body.classList.contains("dark");var ic=document.getElementById("kmt-icon"),la=document.getElementById("kmt-label");if(ic)ic.innerHTML=d?SUN:MOON;if(la)la.textContent=d?"Light mode":"Dark mode";}window.kulaToggle=function(){document.body.classList.toggle("dark");try{localStorage.setItem(K,document.body.classList.contains("dark")?"dark":"light")}catch(e){}paint();};try{var st=localStorage.getItem(K);if(st==="dark")document.body.classList.add("dark");else if(st!=="light"&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)document.body.classList.add("dark");}catch(e){}paint();
 </script>
 
 <script>
